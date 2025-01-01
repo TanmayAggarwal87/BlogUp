@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="Navcontainer">
+        <div class="logo">Blog<ak>Up</ak></div>
+        
+        <ul>
+            <li> <a href="<%= locals.user ? '/userPage' : '/' %>">Home</a></li></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+       
+        
+            <% if(locals.user){%>
+
+            <li><a href="/addBlogs">Add blog</a></li>
+        </ul>
+            <div>
+                <div class="user-info">
+                    <div class="userName" onclick="toggleMenu()">
+                        <div class="icon" style="font-weight: 800; margin-right:5px ;">&#11167;</div>
+                        <%= locals.user.username%>
+                    </div>
+                    <div class="logout-btn">
+                        <form action="/logout" method="post">
+                            <button class="logout">Logout</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            <%
+           
+
+        }
+        
+        else{
+            %>
+        </ul>
+            <div class="buttons">
+                <a href="/login"><button class="button">Login</button></a>
+                <a href="/signup"><button class="button">Signup</button></a>
+            </div>
+            <%
+            }%>
+        
+        </ul>
+    
+    </div>
+        <div>
+            <% if(locals.error){%>
+                <div class="alert alert-danger" role="alert">
+                    <%= locals.error %>
+                </div>
+
+                <%
+
+            }
+            %>
+        </div>
+<script src="/scripts/logout.js"></script>
+</body>
+
+</html>

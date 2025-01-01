@@ -1,0 +1,89 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content:flex-start;
+    position: relative;
+    top: 70px;
+}
+
+
+.card {
+    flex: 1 1 calc(20% - 20px); /* Each card takes up 25% of the row minus the gap */
+    max-width: calc(25% - 20px); /* Ensure cards don't stretch beyond 25% */
+    box-sizing: border-box;
+    width: 18rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    transition: transform 0.3s;
+    margin-top: 20px;
+    margin-left: 15px;
+    justify-content: center;
+    
+}
+
+/* Image styling */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Card body */
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    h5{
+        padding-bottom: 8px;
+    }
+    h7{
+        font-size: 15px;
+        color: rgb(92, 90, 90);
+        padding-bottom: 10px;
+    }
+}
+
+/* Title styling */
+.card-title {
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+}
+
+/* Text styling */
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #9003fc;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color:  #7503cc;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.03);}

@@ -1,0 +1,260 @@
+*{
+    background-color: #f9f9f9;
+}
+
+.Navcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 95%;
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter:blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    border-radius: 25px;
+    margin: 6px 10px;
+    z-index: 10;
+    
+}
+.logo{
+    font-size: 32px;
+    font-family: Roboto Flex;
+    font-weight: bold;
+    background-color: transparent;
+
+    ak{
+        color: #9003fc;
+        background-color: transparent;
+
+    }
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    margin-left: 0px;
+    background-color: transparent;
+    
+}
+
+li{
+    margin: 0px 25px;
+    font-size: 20px;
+    list-style: none;
+    font-family: sans-serif;
+    background-color: transparent;
+    
+    
+    
+    
+ a{
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+    border-radius: 10px;
+    transition: all 0.6s;
+    background-color: transparent;
+    
+ }   
+}
+
+li a:hover{
+    background-color: #9003fc;
+    color: white;
+    
+}
+.buttons{
+    background-color: transparent;
+}
+.buttons a{
+    background-color: transparent;
+}
+.buttons a button{
+
+    padding: 9px 18px;
+    font-size: 18px;
+    margin: 0px 3px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+    transition: all 1s;
+    cursor: pointer;
+}
+.buttons a button:hover{
+    background-color: #9003fc;
+    color: white;
+}
+.text{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-left:20px;
+
+    h1{
+        font-family: Roboto Flex;
+        font-size: 75px;
+        position: relative;
+        top:-50px;
+        left: 0px;
+
+        ak{
+            color: #9003fc;
+        }
+        
+
+    }
+    p{
+        font-size: 30px;
+        font-family: Roboto Flex;
+        position: relative;
+        top:-90px;
+        left: 80px;
+        animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+        font-weight: 500;
+        
+        
+    }
+
+    .cursor {
+        width: 2px;
+        height: 28px;
+        background-color: black; /* Cursor color */
+        display: inline-block;
+        animation: blink 0.5s step-end infinite;
+        position: relative;
+        top:-90px;
+        left: 80px;
+    }
+
+    img{
+        width: 500px;
+        margin-top: 15px;
+        border-radius: 50px;
+    }
+
+    .typing{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+
+  @keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+  
+.text p .ak{
+    color: #9003fc;
+}
+
+alert {
+    padding: 15px;
+    position: relative;
+    top: 0px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    color: #721c24; /* Text color for danger alert */
+    background-color: #f8d7da; /* Background color for danger alert */
+    border-color: #f5c6cb; /* Border color for danger alert */
+    width: 95%;
+}
+
+.alert-danger {
+    position: absolute;
+    top: 75px;
+    right:25px;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #721c24;
+    font-size: 18px;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-radius: 18px;
+    font-family: roboto Flex;
+    width: 95%;
+
+}
+
+/* General styling for user-info */
+.user-info {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Styling the username section */
+.userName {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    background-color: transparent;
+    font-family: Roboto flex;
+
+    .icon{
+        background-color: transparent;
+    }
+}
+
+.userName:hover {
+    background-color: #e2e2e2;
+    
+}
+
+/* Logout button dropdown container */
+.logout-btn {
+    position: absolute;
+    top: 110%; /* Slightly below the username */
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    display: none; /* Hidden by default */
+    z-index: 10;
+}
+
+/* Show the logout button when the parent has the active class */
+.user-info.active .logout-btn {
+    display: block;
+}
+
+/* Styling for the logout button */
+.logout {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+.logout:hover {
+    background-color: #d63a3a;
+}

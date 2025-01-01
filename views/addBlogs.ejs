@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blogs</title>
+    <link rel="stylesheet" href="addBlogs.css">
+</head>
+<body>
+    <%- include("navbar")%>
+    <div class="form-container">
+        <form action="/addBlogs" method="post" enctype="multipart/form-data">
+            <!-- File Input -->
+            <label for="formFile" class="form-label">Upload File</label>
+            <input class="form-control" type="file" id="formFile" name="coverImage">
+    
+            <!-- Title Input -->
+            <label for="title" class="form-label">Title</label>
+            <input class="form-control" type="text" id="title" name="title" placeholder="Enter title">
+    
+            <!-- Body Text Input -->
+            <label for="body" class="form-label">Body</label>
+            <textarea class="form-control textarea" id="body" name="body" placeholder="Enter body text"></textarea>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>

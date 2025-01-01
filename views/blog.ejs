@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <title>BlogUp</title>
+</head>
+<body>
+    <%- include("navbar")%>
+    <div class="container">
+        <h1><%= blog.title%></h1><br>
+        <pre>created by-<strong><%= blog.createdBy.username%></strong></pre><br><br>
+        <img src="<%= blog.coverImageURL%>" width="500px"><br><br>
+        <pre><%= blog.body%></pre>
+    </div>
+
+    <div class="comments">
+        <h1>Comments (<%= comment.length%>)</h1><br>
+        <form action="/comment/<%= blog._id %>" method="post">
+            <div class="comment-form">
+                <input type="text" name="content" class="comment-input" placeholder="Write your comment here...">
+                <button class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="viewComments">
+        <% comment.forEach(coments=>{%>
+            <div class="card-body">
+                <h3><%= coments.createdBy.username%></h3>
+                <h5 class="User_comment"><%= coments.content%></h5>
+            </div>
+                    
+            <%
+        })%>
+
+    </div>
+    
+</body>
+</html>

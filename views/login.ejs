@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <%- include("navbar")%>
+    <div class="container">
+        <div class="image-section">
+            <img src="/image/login.JPG" alt="Illustration of a girl reading">
+          </div>
+        <div class="form-section">
+          <h1>Login to your Account</h1>
+          <p>Whats on your mind today?</p>
+          <form action="/login" method="post">
+            <label for="email" >Email</label>
+            <input type="email" name="email" id="email" placeholder="janedoe@gmail.com">
+    
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password">
+    
+            <button type="submit" class="signup-btn">Login</button>
+          </form>
+        </div>
+        
+      </div>
+    
+
+</body>
+</html>

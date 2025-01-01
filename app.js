@@ -24,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(tokenGenerate.checkForAuthenticationCookie("token"));
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 // Use Routes
 app.use("/", homeRoutes);

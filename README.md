@@ -81,4 +81,29 @@ Follow these steps to run BlogUp locally:
 ---
 
 Feel free to fork this repository, raise issues, and contribute to the project!  
-**Happy Blogging!**  
+**Happy Blogging!** 
+
+
+
+## Here are some Screenshots of the website
+### Home page
+![image](https://github.com/user-attachments/assets/33ecf886-cdba-4c7c-af5b-42aca2244718)
+
+### Login Page
+![image](https://github.com/user-attachments/assets/b907cfd3-787e-4cd2-ae02-fd7dfc7b1aed)
+
+### Signup Page
+![image](https://github.com/user-attachments/assets/aa507e72-430a-4174-8be8-00419fd28781)
+
+### User Page
+![image](https://github.com/user-attachments/assets/c96ba7c3-ba29-48cc-917a-a5a3a86b264c)
+
+### This how the blogs look like
+![image](https://github.com/user-attachments/assets/2e6766a7-26fa-40a3-a3a0-6761f83f4e36)
+![image](https://github.com/user-attachments/assets/36459c2e-63ad-4ddd-a284-c7e88bcf2580)
+
+
+
+
+
+
